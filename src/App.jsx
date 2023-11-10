@@ -1,6 +1,10 @@
-import {RouterProvider, createBrowserRouter, Outlet, NavLink, useRouteError} from "react-router-dom"
+import {RouterProvider, createBrowserRouter} from "react-router-dom"
 import { Logements } from "./pages/Logements"
 import { Apropos } from "./pages/Apropos"
+import { Index } from "./pages/Index"
+import { PageError } from "./pages/PageError"
+import { Root } from "./utils/Root"
+import './App.scss'
 
 const router = createBrowserRouter([
   {
@@ -8,6 +12,10 @@ const router = createBrowserRouter([
     element: <Root/>,
     errorElement: <PageError/>,
     children: [
+      {
+        path: '',
+        element: <Index/>
+      },
       {
         path: 'logements',
         element: <Logements/>
@@ -19,29 +27,6 @@ const router = createBrowserRouter([
     ]
   },
 ])
-
-function PageError() {
-  const error = useRouteError()
-  console.log(error)
-  return <>
-  <h1>Une erreur est survenue</h1>
-  </>
-}
-
-function Root () {
-  return <>
-  <header>
-    <nav>
-      <NavLink to ="/">Home</NavLink>
-      <NavLink to ="/logements">Logements</NavLink>
-      <NavLink to ="/a-propos">A propos</NavLink>
-    </nav>
-  </header>
-  <div className="container my-3">
-    <Outlet/>
-  </div>
-  </>
-}
 
 function App() {
   return <RouterProvider router={router}/>
