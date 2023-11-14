@@ -1,0 +1,49 @@
+.fond {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.texte_paysage {
+    font-size: 48px;
+    font-weight: 500;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.paysage {
+    width: 90%;
+    height: 223px;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.container_logements {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 90%;
+    background-color: #F6F6F6;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+
+.card_logement {
+    flex: 0 0 25%; /* Équivalent de width: 25%; */
+    aspect-ratio: 1/1;
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%), #FF6060;
+    margin: 2%;
+}
