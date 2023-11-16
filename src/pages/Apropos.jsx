@@ -8,14 +8,14 @@ const carouselData = [
     "Respect",
     "Service",
     "Sécurité",
-  ];
+  ]
   
   const carousel = carouselData.map((text, index) => (
     <div key={index} className="card_carousel">
       {text}
       <IoIosArrowUp className='arrow-icon'/>
     </div>
-  ));
+  ))
 
 export function Apropos () {
     return (
