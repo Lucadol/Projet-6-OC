@@ -62,9 +62,11 @@
     color: white;
     font-size: 14px;
     border-radius: 10px;
-    width: 115px;
+    min-width: 115px;
     height: 25px;
     margin-right: 10px;
+    white-space: nowrap;
+    padding: 0 20px;
 }
 
 .card_tags_logements {
