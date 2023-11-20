@@ -3,16 +3,18 @@ import LogementsJson from '../../logements.json'
 import './Logements.scss'
 import { IoIosArrowUp } from "react-icons/io"
 import StarRating from "../components/StarRating"
+import Carousel from '../components/Carousel'
+
 
 export function Logements () {
 
-    const carouselData = [
+    const boiteData = [
         "Description",
         "Equipements"
     ]
 
-    const carousel = carouselData.map((text, index) => (
-        <div key={index} className="card_carousel_logement">
+    const boite = boiteData.map((text, index) => (
+        <div key={index} className="card_boite_logement">
           {text}
           <IoIosArrowUp className='arrow-icon'/>
         </div>
@@ -39,7 +41,7 @@ export function Logements () {
     return (
     <div>
         <div className='page_logement' key={logementCorrespondant.id}>
-            <img className="appartement" src={logementCorrespondant.cover} alt="Photo appartement" />
+            <Carousel images={logementCorrespondant.pictures} />
             <section className="section-1">
                 <div className="title">
                     <h1>{logementCorrespondant.title}</h1>
@@ -61,8 +63,8 @@ export function Logements () {
                 </div>
             </section>
 
-            <div className='carousel_logement'>
-                    {carousel}
+            <div className='boite_logement'>
+                    {boite}
                 </div>
         </div>
     </div>

@@ -1,4 +1,4 @@
-.carousel {
+.boite {
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -7,7 +7,7 @@
     margin-bottom: 46px;
 }
 
-.card_carousel {
+.card_boite {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,4 +26,14 @@
 
 .arrow-icon {
    font-size: 32px;
+    // &:active {
+    //     transform: rotate(180);
+    // }
 }
+
+
+.rotate {
+    transform: rotate(180deg);
+    transition-duration: 400ms;
+
+  }

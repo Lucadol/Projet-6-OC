@@ -1,30 +1,46 @@
+import { useEffect } from 'react';
 import fond from '../assets/Apropos_fond_2.png'
 import './Apropos.scss'
 import { IoIosArrowUp } from "react-icons/io";
 
 
-const carouselData = [
+const boiteData = [
     "Fiabilité",
     "Respect",
     "Service",
     "Sécurité",
   ]
-  
-  const carousel = carouselData.map((text, index) => (
-    <div key={index} className="card_carousel">
+
+export function Apropos () {
+
+  useEffect(() => {
+    const arrowElement = document.querySelector('.arrow-icon')
+
+      arrowElement.addEventListener('click', () => {
+        <div className='carousel_collapse'>
+          <p>Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont
+          régulièrement vérifiées par nos équipes.
+          </p>
+        </div>
+      })
+    }
+  ,[])
+
+
+  const boite = boiteData.map((text, index) => (
+    <div key={index} className="card_boite">
       {text}
       <IoIosArrowUp className='arrow-icon'/>
     </div>
   ))
 
-export function Apropos () {
     return (
         <>
               <div className='fond'>
                 <img className="paysage" src={fond} alt="photo paysage" />
             </div>
-            <div className='carousel'>
-                    {carousel}
+            <div className='boite'>
+                    {boite}
                 </div>
         </>
     )
