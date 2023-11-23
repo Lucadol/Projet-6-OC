@@ -4,6 +4,8 @@ import './Logements.scss'
 import { IoIosArrowUp } from "react-icons/io"
 import StarRating from "../components/StarRating"
 import Carousel from '../components/Carousel'
+import { Collapse } from "../components/Collapse"
+// import { Collapse2 } from "../components/Collapse2"
 
 
 export function Logements () {
@@ -42,30 +44,36 @@ export function Logements () {
     <div>
         <div className='page_logement' key={logementCorrespondant.id}>
             <Carousel images={logementCorrespondant.pictures} />
+            
             <section className="section-1">
-                <div className="title">
-                    <h1>{logementCorrespondant.title}</h1>
-                    <h2>{logementCorrespondant.location}</h2>
+                <div className="div-1">
+                    <div className="title">
+                        <h1>{logementCorrespondant.title}</h1>
+                        <h2>{logementCorrespondant.location}</h2>
+                    </div>
+                    <div className="card_tags_logements">
+                        {tags}
+                    </div>
                 </div>
-                <div className="host-info">
-                    <h2 className="host-name"> {logementCorrespondant.host.name.split(' ').join('\n')}</h2>
-                    <img className="host-photo" src={logementCorrespondant.host.picture} alt="photo hôte" />
+           
+                <div className="div-2">
+                    <div className="host-info">
+                        <h3 className="host-name"> {logementCorrespondant.host.name.split(' ').join('\n')}</h3>
+                        <img className="host-photo" src={logementCorrespondant.host.picture} alt="photo hôte" />
+                    </div>
+                    <div>
+                        <StarRating rating={logementCorrespondant.rating} />
+                    </div>
                 </div>
             </section>
 
             <section className="section-2">
-                <div className="card_tags_logements">
-                    {tags}
-                </div>
-                
-                <div>
-                    <StarRating rating={logementCorrespondant.rating} />
-                </div>
-            </section>
-
-            <div className='boite_logement'>
+                <div className='boite_logement'>
                     {boite}
                 </div>
+                <div><Collapse/></div>
+                {/* <div><Collapse2/></div> */}
+            </section>
         </div>
     </div>
   );

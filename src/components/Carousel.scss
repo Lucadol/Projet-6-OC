@@ -1,41 +1,62 @@
 .carousel {
     display: flex;
     width: 90%;
-    justify-content: center;
+    height: 415px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .image-carousel {
     width: 100%;
-    height: 415px;
+    height: 100%;
     object-fit: cover;
     border-radius: 20px;
     display: block;
 }
 
-button {
+.carousel button {
     background: none;
-    border: none; 
+    border: none;
     position: absolute;
     font-size: 79.2px;
     top: 30%;
     cursor: pointer;
-    color: white;
+    color: black;
 }
 
-.arrow-right {
-    right: 5.5%;
-}
+// .carousel .arrow-right {
+//     right: 5.5%;
+// }
 
-.arrow-left {
-    right: 89%;
-}
+// .carousel .arrow-left {
+//     right: 89%;
+// }
 
-.image-info {
+.carousel .image-info {
     position: absolute;
     bottom: 430px;
     right: 685px;
     font-size: 18px;
     font-weight: 500;
     color: white;
-  }
+}
   
+
+@media screen and (max-width: 1024px) {
+    .carousel {
+        max-height: 315px;
+    }
+
+   
+
+
+}
+  
+  
+@media screen and (max-width: 430px) {
+    .carousel {
+        height: 255px;
+    }
+  
+}

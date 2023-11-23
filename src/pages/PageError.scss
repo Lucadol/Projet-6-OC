@@ -16,6 +16,7 @@
     font-size: 36px;
     font-weight: 500;
     margin-bottom: 69px;
+    text-align: center;
 }
 
 .Error404 .link {
@@ -23,4 +24,41 @@
     font-weight: 500;
     margin-bottom: 60px;
     text-decoration: underline;
+}
+
+@media screen and (max-width: 1024px) {
+    .Error404 h1 {
+        font-size: 200px;
+    }
+
+    .Error404 p {
+        font-size: 28px;
+    }
+
+    .Error404 .link {
+        font-size: 16px;
+    }
+
+
+}
+
+@media screen and (max-width: 430px) {
+    .Error404 h1 {
+        font-size: 96px;
+        margin-top: 73px;
+    }
+
+    .Error404 p {
+        font-size: 18px;
+        width: 80%;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+
+    .Error404 .link {
+        font-size: 14px;
+        margin: 90px 0;
+    }
+
+
 }

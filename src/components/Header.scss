@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 75px;
+    padding: 2% 5.5%;
 }
 
 .header a {
@@ -11,4 +11,31 @@
     font-weight: 500;
     text-decoration: none;
     padding-left: 40px;
+}
+
+@media screen and (max-width: 1024px) {
+    .header img {
+        width: 150px;
+    }
+
+    .header a {
+        font-size: 20px;
+        padding-left: 20px;
+    }
+
+
+}
+
+
+@media screen and (max-width: 430px) {
+    .header img {
+        width: 130px;
+    }
+
+    .header a {
+        font-size: 12px;
+        text-transform: uppercase;
+     }
+
+
 }

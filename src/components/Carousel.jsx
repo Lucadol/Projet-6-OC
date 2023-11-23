@@ -20,16 +20,24 @@ const Carousel = ({ images }) => {
 
   return (
     <div className="carousel">
-      <button className="arrow-left" onClick={goToPrevSlide}>
-        <MdOutlineArrowBackIos />
-        </button>
-      <img className="image-carousel" src={images[currentIndex]} alt={`slide-${currentIndex}`} />
-      <div className='image-info'>
+      <img
+        className="image-carousel"
+        src={images[currentIndex]}
+        alt={`slide-${currentIndex}`} 
+      />
+      {totalImages > 1 && (
+        <>
+          <div className='image-info'>
             {currentIndex + 1}/{totalImages}
-        </div>
-      <button className="arrow-right" onClick={goToNextSlide}>
-        <MdOutlineArrowForwardIos />
-        </button>
+          </div>
+          <button className="arrow-left" onClick={goToPrevSlide}>
+            <MdOutlineArrowBackIos />
+          </button>
+          <button className="arrow-right" onClick={goToNextSlide}>
+            <MdOutlineArrowForwardIos />
+          </button>
+        </>
+      )}
     </div>
   )
 }

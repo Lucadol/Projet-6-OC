@@ -42,7 +42,7 @@
 
 
 .card_logement {
-    flex: 0 0 28%; /* Équivalent de width: 25%; */
+    flex: 0 0 28%;
     aspect-ratio: 1/1;
     border-radius: 10px;
     margin: 2%;
@@ -79,3 +79,42 @@
     color: white;
     padding: 5px;
   }
+
+@media screen and (max-width: 1024px) {
+    .texte_paysage {
+        font-size: 34px;     
+    }
+
+    .container_logements {
+        justify-content: space-evenly;
+    }
+
+    .card_logement {
+        flex: 0 44%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .texte_paysage {
+        font-size: 24px;
+        left: 40%;
+        text-align:left;
+    }
+
+    .paysage {
+        height: 111px;
+        object-fit: cover;
+    }
+
+    .container_logements {
+        background-color: white;
+        margin: 0;
+    }
+
+    .card_logement {
+        flex: 100%;
+        aspect-ratio:initial
+    }
+}
