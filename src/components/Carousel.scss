@@ -20,23 +20,25 @@
     border: none;
     position: absolute;
     font-size: 79.2px;
-    top: 30%;
+    align-items: center;
     cursor: pointer;
-    color: black;
+    color: white;
 }
 
-// .carousel .arrow-right {
-//     right: 5.5%;
-// }
 
-// .carousel .arrow-left {
-//     right: 89%;
-// }
+.carousel .arrow-right {
+    right: 5.5%;
+}
+
+.carousel .arrow-left {
+    left: 5.5%;
+}
 
 .carousel .image-info {
-    position: absolute;
-    bottom: 430px;
-    right: 685px;
+    position: relative;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 18px;
     font-weight: 500;
     color: white;
@@ -48,6 +50,10 @@
         max-height: 315px;
     }
 
+    .carousel button {
+        font-size: 70px;
+    }
+
    
 
 
@@ -57,6 +63,14 @@
 @media screen and (max-width: 430px) {
     .carousel {
         height: 255px;
+    }
+
+    .carousel button {
+        font-size: 35px;
+    }
+
+    .carousel .image-info {
+        display: none;
     }
   
 }

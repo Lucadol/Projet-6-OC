@@ -132,7 +132,7 @@
 
     .card_tags {
         font-size: 12px;
-        min-width: 100px;
+        min-width: 95px;
     }
 
     .card_boite_logement {
@@ -142,45 +142,12 @@
     .arrow-icon {
         font-size: 26px;
     }
-   
-
-
 }
-  
-@media screen and (max-width: 430px) {
-    .page_logement {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-content: center;
-    }
 
-    .page_logement h1 {
-        font-size: 18px;
-    }
-
-    .page_logement h2 {
-            font-size: 14px;
-    }
-
-    .page_logement h3 {
-        font-size: 12px;
-    }
-
+@media screen and (max-width: 550px) {
     .section-1 {
         flex-direction: column;
         align-items: flex-start
-    }
-
-    .card_tags {
-        font-size: 10px;
-        min-width: 84px;
-        height: 18px;
-    }
-
-    .card_tags_logements {
-        margin-top: 10px;
-        margin-bottom: 10px;
     }
 
     .div-2 {
@@ -193,6 +160,40 @@
 
     .host-info {
         margin-left: 0;
+    }
+
+    .star-rating {
+        margin-left: 0;
+    }
+}
+
+  
+@media screen and (max-width: 430px) {
+      .page_logement h1 {
+        font-size: 18px;
+    }
+
+    .page_logement h2 {
+            font-size: 14px;
+    }
+
+    .page_logement h3 {
+        font-size: 12px;
+    }
+
+    .card_tags {
+        font-size: 10px;
+        min-width: 84px;
+        height: 18px;
+    }
+
+    .card_tags_logements {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        // flex-wrap: wrap; 
+    }
+
+    .host-info {
         margin-bottom: 5px;
     }
 
@@ -203,7 +204,6 @@
     }
 
     .star-rating {
-        margin-left: 0;
         margin-bottom: 10px;
     }
 
