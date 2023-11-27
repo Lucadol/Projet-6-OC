@@ -1,30 +1,47 @@
-import { useState } from 'react'
-import { IoIosArrowUp } from 'react-icons/io'
-import './Collapse.scss'
+import { useState, useEffect, useRef } from "react";
+import PropTypes from "prop-types";
+import { IoIosArrowUp } from "react-icons/io";
+import "./Collapse.scss";
 
-export function Collapse() {
-  const [isWhiteBoxVisible, setWhiteBoxVisibility] = useState(false)
+export function Collapse ({ title, content }) {
+  const [toggle, setToggle] = useState(false)
+  const [heightEl, setHeightEl] = useState()
 
-  const toggleWhiteBox = () => {
-    setWhiteBoxVisibility(!isWhiteBoxVisible)
+  const refHeight = useRef()
+
+  useEffect(() => {
+    setHeightEl(`${refHeight.current.scrollHeight}px`)
+  }, [toggle])
+
+  const toggleState = () => {
+    setToggle(!toggle);
   }
 
   return (
-    <article className='boite-collapse'>
+    <div className="accordion">
+      <button onClick={toggleState} className="accordion-visible">
+        <h2>{title}</h2>
+        <IoIosArrowUp
+          className={toggle ? "active" : ""}
+          id="arrow"
+          alt="Arrow"
+        />
+      </button>
 
-      <div className='red_box' onClick={toggleWhiteBox}>
-        <label htmlFor="description">
-            <h3>Description</h3>
-            <IoIosArrowUp className={`arrow-icon ${isWhiteBoxVisible ? 'rotate' : ''}`} />
-        </label>
+      <div
+        className={toggle ? "accordion-toggle animated" : "accordion-toggle"}
+        style={{ height: toggle ? `${heightEl}` : "0px" }}
+        ref={refHeight}
+      >
+        <p aria-hidden={toggle ? "true" : "false"}>{content}</p>
       </div>
-
-      {isWhiteBoxVisible && (
-        <div className={`white_box ${isWhiteBoxVisible ? 'open' : ''}`}>
-          Profitez du charme de la vie parisienne dans un magnifique appartement. A 3 minutes à pied du Canal Saint Martin, vous serez proche des transports, mais également de nombreux commerces. Lappartement est tout équipé, et possède également un parking pour ceux qui souhaitent se déplacer en voiture.
-        </div>
-      )}
-
-    </article>
+    </div>
   )
 }
+
+Collapse.propTypes = {
+  title: PropTypes.string.isRequired,
+  content: PropTypes.node.isRequired,
+}
+
+export default Collapse

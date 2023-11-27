@@ -1,26 +1,12 @@
 import { useParams, Navigate } from "react-router-dom"
 import LogementsJson from '../../logements.json'
 import './Logements.scss'
-import { IoIosArrowUp } from "react-icons/io"
 import StarRating from "../components/StarRating"
 import Carousel from '../components/Carousel'
 import { Collapse } from "../components/Collapse"
-// import { Collapse2 } from "../components/Collapse2"
 
 
 export function Logements () {
-
-    const boiteData = [
-        "Description",
-        "Equipements"
-    ]
-
-    const boite = boiteData.map((text, index) => (
-        <div key={index} className="card_boite_logement">
-          {text}
-          <IoIosArrowUp className='arrow-icon'/>
-        </div>
-      ))
 
     const {id} = useParams()
 
@@ -39,6 +25,26 @@ export function Logements () {
             {text}
         </div>
     ))
+
+    const collapseData = [
+        {
+          title: "Description",
+          content: logementCorrespondant.description,
+        },
+        {
+          title: "Equipements",
+          content:
+            <ul>
+                {logementCorrespondant.equipments.map((equipment, index) => (
+                    <li key={index}>{equipment}</li>
+                ))}
+            </ul>
+        },
+      ];
+
+      const collapses = collapseData.map((data, index) => (
+        <Collapse key={index} title={data.title} content={data.content} />
+      ));
 
     return (
     <div>
@@ -69,10 +75,8 @@ export function Logements () {
 
             <section className="section-2">
                 <div className='boite_logement'>
-                    {boite}
+                    {collapses}
                 </div>
-                <div><Collapse/></div>
-                {/* <div><Collapse2/></div> */}
             </section>
         </div>
     </div>
