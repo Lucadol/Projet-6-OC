@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
-import { IoIosArrowUp } from "react-icons/io";
+import { IoIosArrowDown } from "react-icons/io";
 import "./Collapse.scss";
 
 export function Collapse ({ title, content }) {
@@ -20,8 +20,8 @@ export function Collapse ({ title, content }) {
   return (
     <div className="accordion">
       <button onClick={toggleState} className="accordion-visible">
-        <h2>{title}</h2>
-        <IoIosArrowUp
+        <h4>{title}</h4>
+        <IoIosArrowDown
           className={toggle ? "active" : ""}
           id="arrow"
           alt="Arrow"

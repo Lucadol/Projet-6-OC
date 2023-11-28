@@ -1,39 +1,32 @@
+.Apropos {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.fond {
+    width: 100%;
+}
+
 .boite {
     display: flex;
     flex-direction: column;
-    align-content: center;
-    flex-wrap: wrap;
-    margin-top: 10px;
-    margin-bottom: 46px;
-}
-
-.card_boite {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    max-width: 1023px;
-    width: 80%;
-    height: 52px;
-    border-radius: 5px;
-    background: #FF6060;
-    margin: 2%;
-    color: white;
-    font-size: 24px;
-    font-weight: 500;
-    padding: 12px 15px;
-    margin-bottom: 0;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    gap: 25px;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: stretch;
 }
 
-// .arrow-icon {
-//    font-size: 32px;
-//     // &:active {
-//     //     transform: rotate(180);
-//     // }
-// }
-
-
-// .rotate {
-//     transform: rotate(180deg);
-//     transition-duration: 400ms;
-
-//   }
+@media screen and (max-width: 430px) {
+    .boite {
+        width: 90%;
+        gap: 15px
+    }
+    
+}

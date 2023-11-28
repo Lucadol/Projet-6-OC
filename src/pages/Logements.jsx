@@ -26,11 +26,14 @@ export function Logements () {
         </div>
     ))
 
-    const collapseData = [
+    const collapseDescription = [
         {
           title: "Description",
           content: logementCorrespondant.description,
-        },
+        }
+        ];
+
+    const collapseEquipements = [
         {
           title: "Equipements",
           content:
@@ -42,7 +45,11 @@ export function Logements () {
         },
       ];
 
-      const collapses = collapseData.map((data, index) => (
+      const collapse1 = collapseDescription.map((data, index) => (
+        <Collapse key={index} title={data.title} content={data.content} />
+      ));
+
+      const collapse2 = collapseEquipements.map((data, index) => (
         <Collapse key={index} title={data.title} content={data.content} />
       ));
 
@@ -74,8 +81,11 @@ export function Logements () {
             </section>
 
             <section className="section-2">
-                <div className='boite_logement'>
-                    {collapses}
+                <div className='boite_logement1'>
+                    {collapse1}
+                </div>
+                <div className='boite_logement2'>
+                    {collapse2}
                 </div>
             </section>
         </div>
