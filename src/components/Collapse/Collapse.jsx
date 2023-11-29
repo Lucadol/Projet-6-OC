@@ -1,7 +1,7 @@
-import { useState, useEffect, useRef } from "react";
-import PropTypes from "prop-types";
-import { IoIosArrowDown } from "react-icons/io";
-import "./Collapse.scss";
+import { useState, useEffect, useRef } from "react"
+import PropTypes from "prop-types"
+import { IoIosArrowDown } from "react-icons/io"
+import "./Collapse.scss"
 
 export function Collapse ({ title, content }) {
   const [toggle, setToggle] = useState(false)
@@ -33,7 +33,9 @@ export function Collapse ({ title, content }) {
         style={{ height: toggle ? `${heightEl}` : "0px" }}
         ref={refHeight}
       >
-        <p aria-hidden={toggle ? "true" : "false"}>{content}</p>
+        <div aria-hidden={toggle ? "true" : "false"}>
+          {content}
+        </div>
       </div>
     </div>
   )

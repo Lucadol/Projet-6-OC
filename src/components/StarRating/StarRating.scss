@@ -1,0 +1,25 @@
+$primary-color: #FF6060;
+$secondary-color: #E3E3E3;
+
+.star {
+  font-size: 24px;
+  margin: 0 5px;
+
+  &.red {
+    color: $primary-color;
+  }
+
+  &.grey {
+    color: $secondary-color;
+  }
+
+  @media screen and (max-width: 1024px) {
+    font-size: 20px;
+    margin: 0 3px;
+  }
+
+  @media screen and (max-width: 430px) {
+    font-size: 13px;
+    margin: 0 3px;
+  }
+}

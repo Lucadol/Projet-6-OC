@@ -1,0 +1,230 @@
+.page_logement {
+  $primaryColor: #FF6060;
+  $secondaryColor: white;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+
+  h1 {
+    font-size: 36px;
+    font-weight: 500;
+    color: $primaryColor;
+    padding-top: 20px;
+  }
+
+  h2, h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: $primaryColor;
+    margin-top: 10px;
+  }
+
+  .section-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .host-info {
+    display: flex;
+    margin-left: 30px;
+    margin-bottom: 20px;
+  }
+
+  .host-name {
+    white-space: pre-line;
+    margin-right: 10px;
+  }
+
+  .host-photo {
+    height: 64px;
+    width: 64px;
+    border-radius: 50px;
+  }
+
+  .star-rating {
+    margin-top: 5px;
+    margin-left: 15px;
+  }
+
+  .card_tags {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $primaryColor;
+    color: $secondaryColor;
+    font-size: 14px;
+    border-radius: 10px;
+    min-width: 115px;
+    height: 25px;
+    margin-right: 10px;
+    white-space: nowrap;
+    padding: 0 20px;
+  }
+
+  .card_tags_logements {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+
+  .section-2 {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .boite_logement_Description, .boite_logement_Equipements {
+    width: 45%;
+  }
+
+  .boite_logement {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 46px;
+  }
+
+  .card_boite_logement {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1023px;
+    width: 47%;
+    height: 52px;
+    border-radius: 10px;
+    background: $primaryColor;
+    color: $secondaryColor;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 12px 15px;
+    margin-bottom: 0;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .div-1 {
+      max-width: 400px;
+    }
+
+    h1 {
+      font-size: 26px;
+    }
+
+    h2, h3 {
+      font-size: 14px;
+    }
+
+    .host-photo {
+      height: 54px;
+      width: 54px;
+    }
+
+    .card_tags {
+      font-size: 12px;
+      min-width: 95px;
+    }
+
+    .card_boite_logement {
+      font-size: 16px;
+    }
+
+    .arrow-icon {
+      font-size: 26px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .section-1 {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .div-2 {
+      width: 100%;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .host-info {
+      margin-left: 0;
+    }
+
+    .star-rating {
+      margin-left: 0;
+    }
+  }
+
+  @media screen and (max-width: 430px) {
+    .div-1 {
+      max-width: 300px;
+    }
+
+    h1 {
+      font-size: 18px;
+    }
+
+    h2 {
+      font-size: 14px;
+    }
+
+    h3 {
+      font-size: 12px;
+    }
+
+    .card_tags {
+      font-size: 10px;
+      min-width: 84px;
+      height: 18px;
+    }
+
+    .card_tags_logements {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .host-info {
+      margin-bottom: 5px;
+    }
+
+    .host-photo {
+      height: 32px;
+      width: 32px;
+      margin-top: 9px;
+    }
+
+    .star-rating {
+      margin-bottom: 10px;
+    }
+
+    .boite_logement {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card_boite_logement {
+      width: 100%;
+      margin-bottom: 15px;
+      font-size: 13px;
+      height: 30px;
+    }
+
+    .section-2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 90%;
+      margin-bottom: 20px;
+    }
+
+    .boite_logement_Description, .boite_logement_Equipements {
+      width: 100%;
+      margin: 10px 0;
+    }
+  }
+}

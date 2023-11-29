@@ -1,4 +1,4 @@
-.footer{
+.footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,26 +9,23 @@
     font-weight: 500;
     padding-top: 50px;
     padding-bottom: 23px;
-}
-
-.footer img {
-    padding: 10px;
-}
-
-.footer p {
-    padding: 20px;
-}
-
-@media screen and (max-width: 430px) {
-    .footer{
-     
-        padding-bottom: 40px;
+  
+    img {
+      padding: 10px;
     }
-    .footer p {
+  
+    p {
+      padding: 20px;
+    }
+  
+    @media screen and (max-width: 430px) {
+      padding-bottom: 40px;
+  
+      p {
         font-size: 12px;
         width: 30%;
         padding: 10px 0;
+      }
     }
-
-
-}
+  }
+  

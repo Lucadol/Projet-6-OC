@@ -1,6 +1,6 @@
-import fond from '../assets/home_fond_2.png'
+import fond from '../../assets/home_fond_2.png'
 import './Index.scss'
-import LogementsJson from '../../logements.json'
+import LogementsJson from '../../../logements.json'
 
 export function Index () {
 

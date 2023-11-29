@@ -1,0 +1,61 @@
+.Error404 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #FF6060;
+  
+    h1 {
+      font-size: 288px;
+      font-weight: 700;
+      margin: 50px;
+    }
+  
+    p {
+      font-size: 36px;
+      font-weight: 500;
+      margin-bottom: 69px;
+      text-align: center;
+    }
+  
+    .link {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 60px;
+      text-decoration: underline;
+    }
+  
+    @media screen and (max-width: 1024px) {
+      h1 {
+        font-size: 200px;
+      }
+  
+      p {
+        font-size: 28px;
+      }
+  
+      .link {
+        font-size: 16px;
+      }
+    }
+  
+    @media screen and (max-width: 430px) {
+      h1 {
+        font-size: 96px;
+        margin-top: 73px;
+      }
+  
+      p {
+        font-size: 18px;
+        width: 80%;
+        margin-top: 30px;
+        margin-bottom: 10px;
+      }
+  
+      .link {
+        font-size: 14px;
+        margin: 90px 0;
+      }
+    }
+  }
+  

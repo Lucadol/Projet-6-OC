@@ -1,8 +1,8 @@
 import {RouterProvider, createBrowserRouter} from "react-router-dom"
-import { Logements } from "./pages/Logements"
-import { Apropos } from "./pages/Apropos"
-import { Index } from "./pages/Index"
-import { PageError } from "./pages/PageError"
+import { Logements } from "./pages/Logements/Logements"
+import { Apropos } from "./pages/Apropos/Apropos"
+import { Index } from "./pages/Index/Index"
+import { PageError } from "./pages/PageError/PageError"
 import { Root } from "./utils/Root"
 import './App.scss'
 

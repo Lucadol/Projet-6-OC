@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import './PageError.scss'
-import { Header } from '../components/Header'
-import { Footer } from '../components/Footer'
+import { Header } from '../../components/Header/Header'
+import { Footer } from '../../components/Footer/Footer'
 
 export function PageError() {
     return <>
@@ -16,3 +16,4 @@ export function PageError() {
       <Footer/>
     </>
   }
+  

@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { FaStar } from "react-icons/fa";
+import { FaStar } from "react-icons/fa"
 import './StarRating.scss'
 
 

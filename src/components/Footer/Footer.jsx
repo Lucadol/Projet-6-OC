@@ -1,4 +1,4 @@
-import footer from '../assets/logo_blanc.png'
+import footer from '../../assets/logo_blanc.png'
 import './Footer.scss'
 
 export function Footer () {

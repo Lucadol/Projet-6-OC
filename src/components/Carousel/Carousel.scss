@@ -1,0 +1,65 @@
+.carousel {
+    display: flex;
+    width: 90%;
+    height: 415px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+  
+    button {
+      background: none;
+      border: none;
+      position: absolute;
+      font-size: 79.2px;
+      align-items: center;
+      cursor: pointer;
+      color: white;
+    }
+  
+    .arrow-right {
+      right: 5.5%;
+    }
+  
+    .arrow-left {
+      left: 5.5%;
+    }
+  
+    .image-info {
+      position: relative;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 18px;
+      font-weight: 500;
+      color: white;
+    }
+  
+    .image-carousel {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+      display: block;
+    }
+  
+    @media screen and (max-width: 1024px) {
+      max-height: 315px;
+  
+      button {
+        font-size: 70px;
+      }
+    }
+  
+    @media screen and (max-width: 430px) {
+      height: 255px;
+  
+      button {
+        font-size: 35px;
+      }
+  
+      .image-info {
+        display: none;
+      }
+    }
+  }
+  
