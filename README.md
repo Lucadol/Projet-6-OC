@@ -1,8 +1,17 @@
-# React + Vite
+# Projet n°6 - Parcours Développeur Web - OpenClassrooms
+## Créez une application web de location immobilière avec React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Objectifs de la mission :
+* Initialiser le projet React et créer les composants selon les maquettes Figma ;
+* Intégrer les fonctionnalités spécifiées, notamment le comportement de la galerie et des Collapses ;
+* Appliquer le design en utilisant Sass pour la génération du style CSS ;
+* Assurer le responsive de l'application conforme aux indications des maquettes.
 
-Currently, two official plugins are available:
+### Compétences évaluées
+* Mettre en œuvre des animations CSS
+* Développer une interface web avec Sass
+* Configurer la navigation entre les pages de l'application avec React Router
+* Développer des éléments de l'interface d'un site web grâce à des composants React
+* Initialiser une application avec Create React App
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Site link : https://lucadol.github.io/Projet-6/
