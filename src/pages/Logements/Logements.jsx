@@ -10,7 +10,7 @@ const LogementSection = ({ title, content }) => (
   <div className={`boite_logement_${title}`}>
     <Collapse title={title} content={content} />
   </div>
-);
+)
 
 LogementSection.propTypes = {
     title: PropTypes.string.isRequired,
@@ -18,16 +18,16 @@ LogementSection.propTypes = {
   }
 
 export function Logements () {
-  const { id } = useParams();
+  const { id } = useParams()
 
-  const logementCorrespondant = LogementsJson.find(logement => logement.id === id);
+  const logementCorrespondant = LogementsJson.find(logement => logement.id === id)
 
   if (!logementCorrespondant) {
     return <Navigate to='/PageError' />
   }
 
-  const tagsData = logementCorrespondant.tags;
-  const tags = tagsData.map((text, index) => <div key={index} className='card_tags'>{text}</div>);
+  const tagsData = logementCorrespondant.tags
+  const tags = tagsData.map((text, index) => <div key={index} className='card_tags'>{text}</div>)
 
   const collapseDescription = [
     {
@@ -86,5 +86,5 @@ export function Logements () {
         </section>
       </div>
     </div>
-  );
+  )
 }

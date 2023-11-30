@@ -8,9 +8,13 @@ const Carousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const totalImages = images.length
 
+  Carousel.propTypes = {
+    images: PropTypes.arrayOf(PropTypes.string).isRequired,
+  }
+
   const goToNextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % totalImages)
-  };
+  }
 
   const goToPrevSlide = () => {
     setCurrentIndex((prevIndex) =>
@@ -41,9 +45,5 @@ const Carousel = ({ images }) => {
     </div>
   )
 }
-
-Carousel.propTypes = {
-    images: PropTypes.arrayOf(PropTypes.string).isRequired,
-  }
 
 export default Carousel

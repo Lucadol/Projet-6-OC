@@ -7,6 +7,11 @@ export function Collapse ({ title, content }) {
   const [toggle, setToggle] = useState(false)
   const [heightEl, setHeightEl] = useState()
 
+  Collapse.propTypes = {
+    title: PropTypes.string.isRequired,
+    content: PropTypes.node.isRequired,
+  }
+
   const refHeight = useRef()
 
   useEffect(() => {
@@ -14,7 +19,7 @@ export function Collapse ({ title, content }) {
   }, [toggle])
 
   const toggleState = () => {
-    setToggle(!toggle);
+    setToggle(!toggle)
   }
 
   return (
@@ -39,11 +44,6 @@ export function Collapse ({ title, content }) {
       </div>
     </div>
   )
-}
-
-Collapse.propTypes = {
-  title: PropTypes.string.isRequired,
-  content: PropTypes.node.isRequired,
 }
 
 export default Collapse
