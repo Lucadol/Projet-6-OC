@@ -35,7 +35,7 @@ $font-family: 'Montserrat';
     transition: transform 0.2s ease-in-out;
   }
 
-  &.active #arrow {
+  #arrow.active {
     transform: rotate(0deg);
   }
 }
