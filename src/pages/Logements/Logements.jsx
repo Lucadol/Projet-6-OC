@@ -1,21 +1,9 @@
-import PropTypes from 'prop-types'
 import { useParams, Navigate } from 'react-router-dom'
 import LogementsJson from '../../../logements.json'
 import './Logements.scss'
 import StarRating from '../../components/StarRating/StarRating'
 import Carousel from '../../components/Carousel/Carousel'
 import { Collapse } from '../../components/Collapse/Collapse'
-
-const LogementSection = ({ title, content }) => (
-  <div className={`boite_logement_${title}`}>
-    <Collapse title={title} content={content} />
-  </div>
-)
-
-LogementSection.propTypes = {
-    title: PropTypes.string.isRequired,
-  content: PropTypes.node.isRequired,
-  }
 
 export function Logements () {
   const { id } = useParams()
@@ -78,10 +66,14 @@ export function Logements () {
 
         <section className='section-2'>
           {collapseDescription.map((data, index) => (
-            <LogementSection key={index} title={data.title} content={data.content} />
+            <div key={index} className={`boite_logement_${data.title}`}>
+             <Collapse title={data.title} content={data.content} />
+             </div>
           ))}
           {collapseEquipements.map((data, index) => (
-            <LogementSection key={index} title={data.title} content={data.content} />
+            <div key={index} className={`boite_logement_${data.title}`}>
+            <Collapse title={data.title} content={data.content} />
+            </div>
           ))}
         </section>
       </div>
