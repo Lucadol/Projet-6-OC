@@ -1,5 +1,16 @@
-# Projet n°6 - Parcours Développeur Web - OpenClassrooms
+# <p align="center">OC-Projet7-Kasa</p>
 ## Créez une application web de location immobilière avec React
+
+### 🛠️ Install Dependencies 
+```bash
+npm install
+```
+
+### 🧑🏻‍💻 Usage
+```bash
+npm run dev
+```
+Site link : 
 
 ### Objectifs de la mission :
 * Initialiser le projet React et créer les composants selon les maquettes Figma ;
@@ -14,4 +25,4 @@
 * Développer des éléments de l'interface d'un site web grâce à des composants React
 * Initialiser une application avec Create React App
 
-Site link : https://lucadol.github.io/Projet-6/
+*Tested with React 18.2.0*
