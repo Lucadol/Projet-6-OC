@@ -1,4 +1,4 @@
-# <p align="center">OC-Projet7-Kasa</p>
+# <p align="center">OC-Projet6-Kasa</p>
 ## Créez une application web de location immobilière avec React
 
 ### 🛠️ Install Dependencies 
@@ -10,7 +10,10 @@ npm install
 ```bash
 npm run dev
 ```
-Site link : 
+
+![Projet 6](https://github.com/Lucadol/Projet-6-OC/assets/130574901/0457f66c-0e32-4818-87f5-41151c873781)
+
+Site link : https://kasa-beige-five.vercel.app/
 
 ### Objectifs de la mission :
 * Initialiser le projet React et créer les composants selon les maquettes Figma ;
